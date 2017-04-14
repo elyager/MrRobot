@@ -1,2 +1,2 @@
 #Mr. Robot
-Glitched Image Styel
+Glitched Image Style

@@ -1,10 +1,9 @@
-window.onload = function() {
-  var canvas = document.getElementById('canvas');
-  var context = canvas.getContext('2d');
+  var $canvas = document.getElementById('canvas');
+  var context = $canvas.getContext('2d');
   var img = new Image();
   img.src = 'cara.jpg';
 
-  var w, h, offset, glitchInterval; //dynamic assigments
+  var w, h, offset, glitchInterval;
   
   img.onload = function() {
     init();
@@ -13,9 +12,9 @@ window.onload = function() {
 
   var init = function() {
     clearInterval(glitchInterval); //remover el intervalo anterior
-    canvas.width = w = img.width + 30;
+    $canvas.width = w = img.width + 30;
     offset = w * .1; //offset de un 10% del ancho
-    canvas.height = h  = img.height;
+    $canvas.height = h = img.height;
     
     glitchInterval = setInterval(function() {
       clear();
@@ -30,8 +29,8 @@ window.onload = function() {
       var y = Math.random() * h;
       var spliceWidth = w - x;
       var spliceHeight = randInt(5, h / 3);
-      context.drawImage(canvas, 0, y, spliceWidth, spliceHeight, x, y, spliceWidth, spliceHeight);
-      context.drawImage(canvas, spliceWidth, y, x, spliceHeight, 0, y, x, spliceHeight);
+      context.drawImage($canvas, 0, y, spliceWidth, spliceHeight, x, y, spliceWidth, spliceHeight);
+      context.drawImage($canvas, spliceWidth, y, x, spliceHeight, 0, y, x, spliceHeight);
     }
   };
 
@@ -40,10 +39,6 @@ window.onload = function() {
     context.fill();
   };
 
-  var randInt = function(a, b) {
-    return Math.floor((Math.random() * (b - a) + a));
+  var randInt = function(min, max) {
+    return Math.floor((Math.random() * (max - min) + min));
   };
-}
-
-
-
