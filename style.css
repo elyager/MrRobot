@@ -1,3 +1,15 @@
+@font-face {
+  font-family: './fonts/MrRobot';
+  src: url('./fonts/MrRobot.eot');
+  src: url('./fonts/MrRobot.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/MrRobot.woff2') format('woff2'),
+      url('./fonts/MrRobot.woff') format('woff'),
+      url('./fonts/MrRobot.ttf') format('truetype'),
+      url('./fonts/MrRobot.svg#MrRobot') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,15 +17,19 @@
 
 body {
   background-color: black;
-  color: red;
-  font-family: 'Roboto'
+  font-family: 'MrRobot';
+  font-size: 80px;
+  color: #D71C30;
+
 }
 
 #canvas {
+  width: 80%;
   display: block;
   margin: 30px auto;
 }
 
-h1 {
+.title {
+  margin-top: 5%;
   text-align: center;
 }
