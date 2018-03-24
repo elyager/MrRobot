@@ -1,2 +1,3 @@
-#Mr. Robot
-Glitched Image Style
+# Mr. Robot
+
+Glitched Image Mr. Robot Style using canvas.
